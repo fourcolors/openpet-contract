@@ -9,6 +9,11 @@ const config: HardhatUserConfig = {
   },
 
   networks: {
+    "opstack-testnet": {
+      url: "https://rpc.opstack.org", // Replace with the actual RPC URL for the OP Stack testnet
+      accounts: [process.env.WALLET_KEY as string],
+      gasPrice: 1000000000,
+    },
     "zora-goerli": {
       url: "https://testnet.rpc.zora.energy/",
       accounts: [process.env.WALLET_KEY as string],
