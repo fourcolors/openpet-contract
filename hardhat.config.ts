@@ -7,7 +7,12 @@ const config: HardhatUserConfig = {
   solidity: {
     version: "0.8.19",
   },
+
   networks: {
+    "zora-goerli": {
+      url: "https://testnet.rpc.zora.energy/",
+      accounts: [process.env.WALLET_KEY as string],
+    },
     // for mainnet
     "base-mainnet": {
       url: "https://mainnet.base.org",

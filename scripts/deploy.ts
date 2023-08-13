@@ -1,7 +1,9 @@
 import { ethers } from "hardhat";
 
 async function main() {
-  const nft = await ethers.deployContract("OpenPetNFT");
+  const nft = await ethers.deployContract("OpenPetNFT", [], {
+    gasPrice: 30000000000,
+  });
 
   await nft.waitForDeployment();
 
